@@ -45,6 +45,18 @@ namespace GithubDisplay
             }
         }
 
+        private DateTime reviewingWeek = DateTime.Now;
+
+        public DateTime ReviewingWeek
+        {
+            get { return reviewingWeek; }
+            set { reviewingWeek = value;
+                NotifyFieldChanged();
+                PullGithubData();
+            }
+        }
+
+
         void NotifyFieldChanged([CallerMemberName] string fieldName = "")
         {
             var onPropertyChanged = PropertyChanged;
@@ -57,7 +69,7 @@ namespace GithubDisplay
         public GithubPull()
         {
             //OrgRepos = MockData();
-            PullGithubData();
+            //PullGithubData();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -169,8 +181,8 @@ namespace GithubDisplay
         {
             var commitFilter = new CommitRequest
             {
-                Since = DateTime.Now.AddDays(-7).StartOfWeek(DayOfWeek.Sunday),
-                Until = DateTime.Now.StartOfWeek(DayOfWeek.Sunday)
+                Since = ReviewingWeek.StartOfWeek(DayOfWeek.Sunday),
+                Until = ReviewingWeek.AddDays(7).StartOfWeek(DayOfWeek.Sunday)
             };
             return await client.Repository.Commit.GetAll(repositoryID, commitFilter);
 
