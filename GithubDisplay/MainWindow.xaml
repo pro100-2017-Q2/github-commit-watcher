@@ -6,16 +6,21 @@
         xmlns:local="clr-namespace:GithubDisplay"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <StackPanel>
-        <StackPanel.DataContext>
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Margin="0,0,-117,-1.5">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+        <Grid.DataContext>
             <local:GithubPull />
-        </StackPanel.DataContext>
-        <ItemsControl ItemsSource="{Binding OrgRepos, Mode=Default}">
+        </Grid.DataContext>
+        <ItemsControl Grid.Column="0" ItemsSource="{Binding OrgRepos, Mode=Default}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <local:RepositoryBreakdown DataContext="{Binding}" />
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>
-    </StackPanel>
+    </Grid>
+    </ScrollViewer>
 </Window>

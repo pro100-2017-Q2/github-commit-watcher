@@ -6,7 +6,19 @@
              xmlns:local="clr-namespace:GithubDisplay"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <StackPanel>
-        <Label Content="{Binding Path=FullName, Mode=OneWay}" />
+    <StackPanel Background="LightBlue">
+        <Label Content="{Binding Path=RepositoryName, Mode=OneWay}" />
+        <ItemsControl ItemsSource="{Binding Path=Contributors}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <local:AuthorBreakdown DataContext="{Binding}" Margin="10,10,0,0" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
     </StackPanel>
 </UserControl>

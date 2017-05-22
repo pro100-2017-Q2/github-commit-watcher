@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace GithubDisplay
 {
     /// <summary>
-    /// Interaction logic for RepositoryBreakdown.xaml
+    /// Interaction logic for AuthorBreakdown.xaml
     /// </summary>
-    public partial class RepositoryBreakdown : UserControl
+    public partial class AuthorBreakdown : UserControl
     {
-        public RepositoryBreakdown()
+        public AuthorBreakdown()
         {
             InitializeComponent();
         }
