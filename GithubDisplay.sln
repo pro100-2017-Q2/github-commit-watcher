@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GithubDisplay", "GithubDisp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionHelpers", "ExtensionHelpers\ExtensionHelpers.csproj", "{2B0D8FDE-5EFF-40BF-A470-5AE3CA7C9C86}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScratchPad", "ScratchPad\ScratchPad.csproj", "{C0B46215-9AEB-400E-82C8-A57633AC92CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2B0D8FDE-5EFF-40BF-A470-5AE3CA7C9C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B0D8FDE-5EFF-40BF-A470-5AE3CA7C9C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B0D8FDE-5EFF-40BF-A470-5AE3CA7C9C86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0B46215-9AEB-400E-82C8-A57633AC92CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0B46215-9AEB-400E-82C8-A57633AC92CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0B46215-9AEB-400E-82C8-A57633AC92CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0B46215-9AEB-400E-82C8-A57633AC92CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

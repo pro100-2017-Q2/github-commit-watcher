@@ -60,7 +60,13 @@
     <Compile Include="AuthorBreakdown.xaml.cs">
       <DependentUpon>AuthorBreakdown.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GettersOfObservable.xaml.cs">
+      <DependentUpon>GettersOfObservable.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GithubPull.cs" />
+    <Compile Include="GridCells.xaml.cs">
+      <DependentUpon>GridCells.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ListBoxItemStyleExample.xaml.cs">
       <DependentUpon>ListBoxItemStyleExample.xaml</DependentUpon>
     </Compile>
@@ -71,6 +77,14 @@
       <DependentUpon>RepositoryBreakdown.xaml</DependentUpon>
     </Compile>
     <Page Include="AuthorBreakdown.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GettersOfObservable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GridCells.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
